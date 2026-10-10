@@ -1,6 +1,0 @@
-{
-  "name": "funcion-pedido",
-  "version": "1.0.0",
-  "description": "Serverless function example for pizza orders",
-  "main": "index.js"
-}
