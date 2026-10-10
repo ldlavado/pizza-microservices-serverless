@@ -1,0 +1,32 @@
+{
+  "margarita": {
+    "name": "Margherita",
+    "price": 18000,
+    "ingredients": ["tomato sauce", "mozzarella", "basil"],
+    "stock": 5
+  },
+  "hawaiana": {
+    "name": "Hawaiian",
+    "price": 22000,
+    "ingredients": ["tomato sauce", "mozzarella", "ham", "pineapple"],
+    "stock": 5
+  },
+  "pepperoni": {
+    "name": "Pepperoni",
+    "price": 24000,
+    "ingredients": ["tomato sauce", "mozzarella", "pepperoni"],
+    "stock": 5
+  },
+  "vegetariana": {
+    "name": "Vegetarian",
+    "price": 21000,
+    "ingredients": ["tomato sauce", "mozzarella", "bell pepper", "mushrooms", "onion"],
+    "stock": 5
+  },
+  "pollo": {
+    "name": "Chicken",
+    "price": 23000,
+    "ingredients": ["tomato sauce", "mozzarella", "chicken", "corn"],
+    "stock": 5
+  }
+}

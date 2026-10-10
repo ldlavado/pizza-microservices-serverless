@@ -1,6 +1,6 @@
 services:
   gateway:
-    build: ./microservicios/gateway
+    build: ./microservices/gateway
     ports:
       - "3000:3000"
     depends_on:
@@ -12,7 +12,7 @@ services:
       - pizza-net
 
   orders:
-    build: ./microservicios/servicio-pedidos
+    build: ./microservices/orders
     ports:
       - "3001:3001"
     depends_on:
@@ -23,21 +23,21 @@ services:
       - pizza-net
 
   inventory:
-    build: ./microservicios/servicio-inventario
+    build: ./microservices/inventory
     ports:
       - "3002:3002"
     networks:
       - pizza-net
 
   payments:
-    build: ./microservicios/servicio-pagos
+    build: ./microservices/payments
     ports:
       - "3003:3003"
     networks:
       - pizza-net
 
   notifications:
-    build: ./microservicios/servicio-notificaciones
+    build: ./microservices/notifications
     ports:
       - "3004:3004"
     networks:
