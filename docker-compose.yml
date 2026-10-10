@@ -1,0 +1,48 @@
+services:
+  gateway:
+    build: ./microservicios/gateway
+    ports:
+      - "3000:3000"
+    depends_on:
+      - orders
+      - inventory
+      - payments
+      - notifications
+    networks:
+      - pizza-net
+
+  orders:
+    build: ./microservicios/servicio-pedidos
+    ports:
+      - "3001:3001"
+    depends_on:
+      - inventory
+      - payments
+      - notifications
+    networks:
+      - pizza-net
+
+  inventory:
+    build: ./microservicios/servicio-inventario
+    ports:
+      - "3002:3002"
+    networks:
+      - pizza-net
+
+  payments:
+    build: ./microservicios/servicio-pagos
+    ports:
+      - "3003:3003"
+    networks:
+      - pizza-net
+
+  notifications:
+    build: ./microservicios/servicio-notificaciones
+    ports:
+      - "3004:3004"
+    networks:
+      - pizza-net
+
+networks:
+  pizza-net:
+    driver: bridge
